@@ -20,7 +20,7 @@ public class gestures extends base {
 		
 		//click = press & hold; Tap = touch
 		
-		TouchAction t = new TouchAction(driver);
+		TouchAction<?> t = new TouchAction<>(driver);
 		
 		WebElement expandList = driver.findElementByXPath("//android.widget.TextView[@text='Expandable Lists']");
 		
