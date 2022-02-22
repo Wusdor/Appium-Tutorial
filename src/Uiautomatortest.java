@@ -7,7 +7,7 @@ public class Uiautomatortest extends base {
 
 	public static void main(String[] args) throws MalformedURLException {
 		
-		AndroidDriver<AndroidElement> driver = capabilities();
+		AndroidDriver<AndroidElement> driver = capabilities("emulator");
 		
 		// driver.findElementByAndroidUIAutomator("attribute(\"value\")");
 		

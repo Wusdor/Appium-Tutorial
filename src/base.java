@@ -11,7 +11,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class base {
 
-	public static AndroidDriver<AndroidElement> capabilities () throws MalformedURLException {
+	public static AndroidDriver<AndroidElement> capabilities (String device) throws MalformedURLException {
 		
 		AndroidDriver<AndroidElement> driver;
 	
@@ -20,7 +20,20 @@ public class base {
 		File appDir = new File("src");
 		File app = new File(appDir, "ApiDemos-debug.apk");
 		
-		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Wusdor");
+		switch (device) {
+			
+			case ("emulator"):
+				
+				cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Wusdor");
+				break;
+				
+			case ("real"):
+				
+				cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device"); //if you want to set real Android device simply apply this line of code
+				break;
+		}
+		
+		//cap.setCapability(MobileCapabilityType.BROWSER_NAME,"Chrome"); //capability for the Mobile browser
 		
 		cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		

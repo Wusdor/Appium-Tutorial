@@ -13,7 +13,7 @@ public class swipedemo extends base {
 
 	public static void main(String[] args) throws MalformedURLException {
 		
-		AndroidDriver<AndroidElement> driver = capabilities();
+		AndroidDriver<AndroidElement> driver = capabilities("emulator");
 		
 		driver.findElementByXPath("//android.widget.TextView[@text='Views']").click();
 		driver.findElementByXPath("//android.widget.TextView[@text='Date Widgets']").click();

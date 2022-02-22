@@ -7,7 +7,7 @@ public class basics extends base {
 
 	public static void main(String[] args) throws MalformedURLException  {
 
-		AndroidDriver<AndroidElement> driver = capabilities();
+		AndroidDriver<AndroidElement> driver = capabilities("real");
 		
 		driver.findElementByXPath("//android.widget.TextView[@text='Preference']").click();
 		driver.findElementByXPath("//android.widget.TextView[@text='3. Preference dependencies']").click();
