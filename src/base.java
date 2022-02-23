@@ -18,7 +18,7 @@ public class base {
 		DesiredCapabilities cap = new DesiredCapabilities();
 		
 		File appDir = new File("src");
-		File app = new File(appDir, "ApiDemos-debug.apk");
+		File app = new File(appDir, "General-Store.apk");
 		
 		switch (device) {
 			
@@ -39,7 +39,9 @@ public class base {
 		
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		
-		driver = new AndroidDriver<>(new URL("http://10.1.0.118:4723/wd/hub"), cap);
+		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 5); // How long (in seconds) will Appium wait for a new command from the client before assuming the client quit and ending the session
+		
+		driver = new AndroidDriver<>(new URL("http://10.1.0.118:4723/wd/hub"), cap); // 10.1.0.118 - work PC; 10.1.0.117 - mac in the office
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
