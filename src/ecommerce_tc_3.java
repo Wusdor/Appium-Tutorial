@@ -53,7 +53,7 @@ public class ecommerce_tc_3 extends base {
 		
 		String lastpageText = driver.findElement(By.id("com.androidsample.generalstore:id/productName")).getText();
 
-		Assert.assertEquals("Jordan 6 Rings", lastpageText);
+		Assert.assertEquals(lastpageText, "Jordan 6 Rings");
 
 	}
 
