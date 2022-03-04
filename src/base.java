@@ -39,7 +39,7 @@ public class base {
 		
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		
-		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 5); // How long (in seconds) will Appium wait for a new command from the client before assuming the client quit and ending the session
+		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 10); // How long (in seconds) will Appium wait for a new command from the client before assuming the client quit and ending the session
 		
 		driver = new AndroidDriver<>(new URL("http://192.168.0.107:4723/wd/hub"), cap); // 10.1.0.118 - work PC; 10.1.0.117 - mac in the office; 192.168.0.107 - work PC (home)
 		
