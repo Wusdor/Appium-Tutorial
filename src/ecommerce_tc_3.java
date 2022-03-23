@@ -8,7 +8,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.MobileBy;
 
-public class ecommerce_tc_3 extends base {
+public class ecommerce_tc_3 extends baseNatHyb {
 
 	public static void main(String[] args) throws MalformedURLException {
 

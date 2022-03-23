@@ -5,7 +5,7 @@ import java.net.MalformedURLException;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
-public class scrollingDemo extends base {
+public class scrollingDemo extends baseNatHyb {
 
 	public static void main(String[] args) throws MalformedURLException {
 		

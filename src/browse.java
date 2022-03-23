@@ -1,42 +1,21 @@
 import java.net.MalformedURLException;
-import java.net.URL;
 
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.By;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.remote.MobileCapabilityType;
 
-public class browse {
+public class browse extends baseChrome {
 
-	public static AndroidDriver<AndroidElement> browseCap(String device) throws MalformedURLException {
-
-		AndroidDriver<AndroidElement> driver;
-
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-
-		switch (device) {
-
-		case ("emulator"):
-
-			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Wusdor");
-			break;
-
-		case ("real"):
-
-			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device"); // if you want to set real
-																							// Android device simply
-																							// apply this line of code
-			break;
-		}
-
-		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
-		capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
+	public static void main(String[] args) throws MalformedURLException {
 		
-		driver = new AndroidDriver<>(new URL("http://192.168.0.107:4723/wd/hub"), capabilities);
-
-		return driver;
-
+		AndroidDriver<AndroidElement> driver = chromeCap("real");
+		
+		driver.get("https://rahulshettyacademy.com/angularAppdemo/");
+		
+		driver.findElement(By.cssSelector(".navbar-toggler")).click();
+		driver.findElement(By.cssSelector("[class*=nav-item]:first-child")).click();
+		
 	}
 
 }

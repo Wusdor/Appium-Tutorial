@@ -6,7 +6,7 @@ import org.testng.Assert;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
-public class ecommerce_tc_2 extends base {
+public class ecommerce_tc_2 extends baseNatHyb {
 
 	public static void main(String[] args) throws MalformedURLException {
 

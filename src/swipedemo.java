@@ -9,7 +9,7 @@ import static java.time.Duration.ofSeconds;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
-public class swipedemo extends base {
+public class swipedemo extends baseNatHyb {
 
 	public static void main(String[] args) throws MalformedURLException {
 		

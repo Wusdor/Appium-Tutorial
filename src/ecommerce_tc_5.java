@@ -16,7 +16,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 
-public class ecommerce_tc_5 extends base {
+public class ecommerce_tc_5 extends baseNatHyb {
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 
